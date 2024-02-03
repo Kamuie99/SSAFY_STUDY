@@ -10,7 +10,7 @@ for _ in range(N):
     arr.append(int(input()))
     
 # 버블 정렬
-def bubbleSorted(array):
+def bubble_sorted(array):
     arr = array[:]
     arr_len = len(array)
     for i in range(arr_len-1):
@@ -20,7 +20,7 @@ def bubbleSorted(array):
     return arr
 
 # 선택 정렬
-def selectionSorted(array):
+def selection_sorted(array):
     arr = array[:]
     arr_len = len(array)
     for i in range(arr_len):
@@ -32,9 +32,26 @@ def selectionSorted(array):
     return arr
 
 # 카운팅 정렬
-def countingSorte(array):
-    pass
+def counting_sorted(array):
+    arr = array[:]
+    max_arr = max(arr)
+    count_arr = [0] * (max_arr + 1)
+    
+    for a in arr:
+        count_arr[a] += 1
+    
+    for i in range(1, len(count_arr)):
+        count_arr[i] += count_arr[i-1]
+    
+    result_arr = [0] * len(arr)
+    for a in arr:
+        result_arr[count_arr[a]-1] = a
+        count_arr[a] -= 1
+    
+    result_arr.reverse()
+    
+    return result_arr
 
 # 주어진 수열이 내림차순으로 졍렬된 결과를 공백으로 구분하여 출력한다.
-result = selectionSorted(arr)
+result = counting_sorted(arr)
 print(*result, end=' ')
