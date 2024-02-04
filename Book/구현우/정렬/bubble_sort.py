@@ -26,3 +26,17 @@ arr2 = [1,2,3,4,5,6,7,8,9,10]
 arr_len2 = len(arr2)
 result = bubble_sort(arr_len2, arr2)
 print(result)
+
+
+import sys
+sys.stdin = open('input.txt', 'rt', encoding='UTF8')
+
+N = int(input())
+arr = list(map(int, input().split()))
+
+for i in range(N-1):
+    for j in range(N-i-1):
+        arr[j] > arr[j+1]
+        arr[j] , arr[j+1] = arr[j+1] , arr[j]
+
+print(arr)

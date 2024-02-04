@@ -6,6 +6,7 @@
 
 array = [7,5,9,0,3,1,6,2,4,8]
 
+# 오름차순
 for i in range(len(array)):
     min_index = i
     for j in range(i + 1, len(array)):
@@ -15,6 +16,7 @@ for i in range(len(array)):
 
 print(array)
 
+# 내림차순
 for i in range(len(array)):
     min_index = i
     for j in range(i + 1, len(array)):

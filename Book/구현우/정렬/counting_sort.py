@@ -8,11 +8,22 @@
 
 array = [7,5,9,0,3,1,6,2,9,1,4,8,0,5,2]
 
-count = [0] * (max(array) + 1)
+# max 쓰지말것을 대비해서
+# array 배열에서 최댓값 찾기
+max_value = array[0]
+for num in array:
+    if num > max_value:
+        max_value = num
+
+print(max_value)
+
+count = [0] * (max_value + 1)
 print(count)  # [0 * 10]의 리스트가 출력됨.
 
 # count라는 리스트의 값을 0으로 초기화해준다음, count의 리스트는 모든 범위를 포함해야 되기 때문에
 # array의 최대값에서 1을 증가시켜준 만큼 해줌.
+
+
 
 for i in range(len(array)):
     count[array[i]] += 1   # 각 array
@@ -20,7 +31,19 @@ for i in range(len(array)):
 print(count)
 # [2,2,2,1,1,2,1,1,1,2]
 
+
+# 오름차순
+
 for i in range(len(count)):
+    # 인덱스 0부터 9까지 하나 씩 확인하면서
+    for j in range(count[i]):
+        # count[i]의 수만큼 반복한다.
+        print(i, end = ' ')
+
+
+# 내림차순
+        
+for i in range(len(count) -1, -1, -1):
     # 인덱스 0부터 9까지 하나 씩 확인하면서
     for j in range(count[i]):
         # count[i]의 수만큼 반복한다.
