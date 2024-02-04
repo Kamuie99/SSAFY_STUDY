@@ -22,6 +22,8 @@ for _ in range(K):
     # print(minIdx_A)
     # print(maxIdx_B)
 
+    # A 배열의 가장 작은 값이 B의 가장 큰 값보다 작을 때만 반복!
+    # 더 작은 수를 바꾸면 총 합계도 줄어들기 때문
     if A[minIdx_A] < B[maxIdx_B]:
         A[minIdx_A], B[maxIdx_B] = B[maxIdx_B], A[minIdx_A]
 
