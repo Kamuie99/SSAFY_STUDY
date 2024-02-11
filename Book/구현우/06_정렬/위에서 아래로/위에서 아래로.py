@@ -9,6 +9,7 @@ arr = [int(input())for _ in range(N)]
 print(arr)
 # 15 27 12
 
+# bubble sort
 for i in range(N-1, 0, -1):
     for j in range(0, i):
         if arr[j] < arr[j+1]:
@@ -16,8 +17,3 @@ for i in range(N-1, 0, -1):
 
 print(*arr)
 # * 리스트 안에 들어있는 원소의 값만 출력 하는것 인듯 ?
-
-
-
-
-

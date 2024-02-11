@@ -20,6 +20,7 @@ print(max_value)
 count = [0] * (max_value + 1)
 print(count)  # [0 * 10]의 리스트가 출력됨.
 
+
 # count라는 리스트의 값을 0으로 초기화해준다음, count의 리스트는 모든 범위를 포함해야 되기 때문에
 # array의 최대값에서 1을 증가시켜준 만큼 해줌.
 
