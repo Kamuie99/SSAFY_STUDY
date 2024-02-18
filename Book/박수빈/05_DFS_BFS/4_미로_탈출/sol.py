@@ -25,7 +25,7 @@ arr = [list(map(int, input())) for _ in range(N)]
 def BFS(s) :
     queue = deque()
     # 큐에 시작점 입력
-    queue.append(s)
+    queue.append(s)    (0, 0)
 
     # 상하좌우 확인
     dx = [0, 1, 0, -1]
