@@ -14,25 +14,25 @@ target_ball_3 = balls[3]
 target_ball_4 = balls[4]
 
 # 1사분면 각도구하기
-# temp1 = abs(260 - white_ball[0]) / abs(target_ball_1[1]-white_ball[1])
-# temp2 = math.atan(temp1)
-# temp3 = math.degrees(temp2)
-# result = 90 - temp3
-# print(f'1사분면 {result}')
+temp1 = abs((target_ball_1[0] - white_ball[0]) / white_ball[1])
+temp2 = math.atan(temp1)
+temp3 = math.degrees(temp2)
+result = temp3
+print(f'1사분면 {result}')
 
 # # 4사분면 각도구하기
-# temp1 = abs(target_ball_2[0] - white_ball[0]) / abs(130-white_ball[1])
-# temp2 = math.atan(temp1)
-# temp3 = math.degrees(temp2)
-# result = 180 - temp3
-# print(f'4사분면 {result}')
+temp1 = abs(target_ball_2[0] - white_ball[0]) / abs(130-white_ball[1])
+temp2 = math.atan(temp1)
+temp3 = math.degrees(temp2)
+result = 180 - temp3
+print(f'4사분면 {result}')
 
 # 3사분면 각도 구하기
-# temp1 = abs(target_ball_3[1] - white_ball[1]) / abs(white_ball[0])
-# temp2 = math.atan(temp1)
-# temp3 = math.degrees(temp2)
-# result = 270 - temp3
-# print(f'3사분면 {result}')
+temp1 = abs(target_ball_3[1] - white_ball[1]) / abs(white_ball[0])
+temp2 = math.atan(temp1)
+temp3 = math.degrees(temp2)
+result = 270 - temp3
+print(f'3사분면 {result}')
 
 
 # 3사분면 선보다 밑에있는 공때리기
